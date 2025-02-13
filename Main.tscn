@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cfranmff6d32s"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_skho8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dyt3b"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" type="CharacterBody2D" parent="."]
+script = ExtResource("1_skho8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(3, 0)
+shape = SubResource("RectangleShape2D_dyt3b")
