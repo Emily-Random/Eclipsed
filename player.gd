@@ -25,7 +25,6 @@ func _physics_process(delta: float) -> void:
 			anim_player.flip_h = true
 		if is_on_floor:
 			anim_player.play("walk")
-		print(is_on_floor())
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		anim_player.play("idle")
