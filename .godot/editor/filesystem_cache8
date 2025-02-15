@@ -1,3 +1,6 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1739367400
-icon.svg::CompressedTexture2D::6250599820523364253::1739367365::1739367405::1::::<><>::
+::res://::1739533475
+icon.svg::CompressedTexture2D::6250599820523364253::1739452945::1739508311::1::::<><>::
+Main.tscn::PackedScene::5158903860989122432::1739452945::0::1::::<><>::res://player.gd
+player.gd::GDScript::-1::1739508319::0::1::::<>CharacterBody2D<>::
+::res://art/::1739533475
