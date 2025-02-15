@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://cfranmff6d32s"]
+[gd_scene load_steps=21 format=3 uid="uid://cfranmff6d32s"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_skho8"]
 [ext_resource type="Texture2D" uid="uid://pe7nyue8r3g" path="res://assets/sprites/Player/3/Idle.png" id="2_b4o70"]
@@ -107,6 +107,8 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_dow2w"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p8mhc"]
 size = Vector2(1147, 38)
 
@@ -118,7 +120,7 @@ script = ExtResource("1_skho8")
 [node name="Camera2D" type="Camera2D" parent="Player"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2(5, -45)
+position = Vector2(-1, -10)
 shape = SubResource("RectangleShape2D_dyt3b")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Player"]
@@ -127,11 +129,12 @@ libraries = {
 }
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
-position = Vector2(9, -55)
+position = Vector2(3, -23)
 sprite_frames = SubResource("SpriteFrames_actmg")
 animation = &"idle"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_dow2w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-0.5, 18)
