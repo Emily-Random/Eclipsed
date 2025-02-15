@@ -32,3 +32,7 @@ func _physics_process(delta: float) -> void:
 		player.flip_h = true
 
 	move_and_slide()
+	
+	for i in range(get_slide_collision_count()):
+		var collision = get_slide_collision(i)
+		print("Colliding with: ", collision.get_collider())
