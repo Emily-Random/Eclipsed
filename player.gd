@@ -1,34 +1,34 @@
 extends CharacterBody2D
 
-
 const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
-@onready var anim_player = $AnimatedSprite2D # 引用 Sprite 节点
-	
-func _physics_process(delta: float) -> void:
-	print("Velocity: ", velocity)
-	# Add the gravity.
-	if not is_on_floor():
-		velocity.y += 980 * delta
-		print("Falling! Velocity.y:", velocity.y)
-		
-	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+@onready var player = $AnimatedSprite2D # Reference to AnimatedSprite2D
 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis("ui_left", "ui_right")
-	if direction != 0:
-		velocity.x = direction * SPEED
-		if direction > 0:
-			anim_player.flip_h = false
-		elif direction < 0:
-			anim_player.flip_h = true
-		if is_on_floor:
-			anim_player.play("walk")
+func _physics_process(delta: float) -> void:
+	var direction = Vector2.ZERO
+
+	# Get input for movement in all directions
+	if Input.is_action_pressed("ui_right"):
+		direction.x += 1
+	if Input.is_action_pressed("ui_left"):
+		direction.x -= 1
+	if Input.is_action_pressed("ui_down"):
+		direction.y += 1
+	if Input.is_action_pressed("ui_up"):
+		direction.y -= 1
+
+	# Normalize direction to maintain consistent speed diagonally
+	if direction.length() > 0:
+		direction = direction.normalized()
+		velocity = direction * SPEED
+		player.play("walk")
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		anim_player.play("idle")
-	print("Moving! Velocity:", velocity)
+		velocity = Vector2.ZERO
+		player.play("idle")
+
+	# Flip sprite based on movement direction (optional)
+	if direction.x > 0:
+		player.flip_h = false
+	elif direction.x < 0:
+		player.flip_h = true
+
 	move_and_slide()
