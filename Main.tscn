@@ -110,7 +110,7 @@ animations = [{
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_dow2w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p8mhc"]
-size = Vector2(1147, 38)
+size = Vector2(201.5, 38)
 
 [node name="Node2D" type="Node2D"]
 
@@ -121,9 +121,8 @@ script = ExtResource("1_skho8")
 zoom = Vector2(5, 5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2(-1, -10)
+position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_dyt3b")
-disabled = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Player"]
 libraries = {
@@ -131,7 +130,7 @@ libraries = {
 }
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
-position = Vector2(3, -23)
+position = Vector2(5, -9)
 sprite_frames = SubResource("SpriteFrames_actmg")
 animation = &"idle"
 
@@ -139,5 +138,7 @@ animation = &"idle"
 physics_material_override = SubResource("PhysicsMaterial_dow2w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-0.5, 18)
+position = Vector2(161, -1)
 shape = SubResource("RectangleShape2D_p8mhc")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]

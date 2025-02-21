@@ -1,15 +1,15 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1739606758
+::res://::1739952311
 icon.svg::CompressedTexture2D::6250599820523364253::1739452945::1739508311::1::::<><>::
-Main.tscn::PackedScene::5158903860989122432::1739606732::0::1::::<><>::res://player.gd
-player.gd::GDScript::-1::1739606758::0::1::::<>CharacterBody2D<>::
+Main.tscn::PackedScene::5158903860989122432::1739709934::0::1::::<><>::res://player.gd<>uid://pe7nyue8r3g::::res://assets/sprites/Player/3/Idle.png<>uid://bkcvkxsfx5k5m::::res://assets/sprites/Player/3/Walk.png
+player.gd::GDScript::-1::1739676000::0::1::::<>CharacterBody2D<>::
 ::res://art/::1739605577
 ::res://assets/::1739605701
 ::res://assets/sprites/::1739605701
-::res://assets/sprites/Player/::1739606758
+::res://assets/sprites/Player/::1739606769
 COUPON.png::CompressedTexture2D::1192808244490848224::1739605701::1739606769::1::::<><>::
 license.txt::TextFile::-1::1739605701::0::1::::<><>::
-::res://assets/sprites/Player/1/::1739606758
+::res://assets/sprites/Player/1/::1739606769
 Attack1.png::CompressedTexture2D::4454882719187891787::1739605701::1739606769::1::::<><>::
 Attack2.png::CompressedTexture2D::2619966486591502588::1739605701::1739606769::1::::<><>::
 Death.png::CompressedTexture2D::1105504434005390980::1739605701::1739606769::1::::<><>::
@@ -26,7 +26,7 @@ SquatAttack.png::CompressedTexture2D::6680989829532102933::1739605701::173960676
 Walk.png::CompressedTexture2D::2039347709827977095::1739605701::1739606769::1::::<><>::
 WalkAttack1.png::CompressedTexture2D::8507596054671081222::1739605701::1739606769::1::::<><>::
 WalkAttack2.png::CompressedTexture2D::9024411402086513236::1739605701::1739606769::1::::<><>::
-::res://assets/sprites/Player/2/::1739606758
+::res://assets/sprites/Player/2/::1739606769
 Attack1.png::CompressedTexture2D::2978337393824277850::1739605701::1739606769::1::::<><>::
 Attack2.png::CompressedTexture2D::1277646359906023311::1739605701::1739606769::1::::<><>::
 Death.png::CompressedTexture2D::8824308100707056104::1739605701::1739606769::1::::<><>::
@@ -43,7 +43,7 @@ SquatAttack.png::CompressedTexture2D::1678709411823646485::1739605701::173960676
 Walk.png::CompressedTexture2D::344397659795381145::1739605701::1739606768::1::::<><>::
 WalkAttack1.png::CompressedTexture2D::4303930621333894356::1739605701::1739606768::1::::<><>::
 WalkAttack2.png::CompressedTexture2D::8865074467856305095::1739605701::1739606768::1::::<><>::
-::res://assets/sprites/Player/3/::1739606758
+::res://assets/sprites/Player/3/::1739606769
 Attack1.png::CompressedTexture2D::2980880086573289705::1739605701::1739606768::1::::<><>::
 Attack2.png::CompressedTexture2D::3681749964318636729::1739605701::1739606768::1::::<><>::
 Death.png::CompressedTexture2D::8704988904882182164::1739605701::1739606768::1::::<><>::
@@ -60,7 +60,7 @@ SquatAttack.png::CompressedTexture2D::1053760855924070472::1739605701::173960676
 Walk.png::CompressedTexture2D::3093732026471326512::1739605701::1739606768::1::::<><>::
 WalkAttack1.png::CompressedTexture2D::5287172630667714731::1739605701::1739606769::1::::<><>::
 WalkAttack2.png::CompressedTexture2D::4302442094353175125::1739605701::1739606769::1::::<><>::
-::res://assets/sprites/Player/Font/::1739606758
+::res://assets/sprites/Player/Font/::1739606768
 Planes_ValMore.ttf::FontFile::4070076902046224253::1739605701::1739606768::1::::<><>::
 ::res://assets/sprites/Player/PSD/::1739605701
 ::res://fonts/::1739533489
