@@ -1,8 +1,8 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1740287308
+::res://::1740287958
 icon.svg::CompressedTexture2D::6250599820523364253::1739605418::1739606580::1::::<><>::
-Main.tscn::PackedScene::5158903860989122432::1740215327::0::1::::<><>::res://player.gd<>uid://bip7wonscssk4::::res://assets/sprites/Player/3/Attack1.png<>uid://pe7nyue8r3g::::res://assets/sprites/Player/3/Idle.png<>uid://bspp5b52ulmib::::res://assets/sprites/Player/3/Attack2.png<>uid://bkcvkxsfx5k5m::::res://assets/sprites/Player/3/Walk.png<>uid://c1igee6286fnu::::res://assets/sprites/object/box1.png<>uid://dwa05peyho37e::::res://assets/sprites/Player/3/Death.png<>uid://cwvura0x1w42y::::res://assets/sprites/Player/3/Hurt.png<>uid://jxkit2nccp7h::::res://assets/sprites/floor/floor_test_texture.png<>uid://chqx4tx5s4o6o::::res://assets/sprites/Player/3/Jump.png<>uid://c3kiaufqh72yj::::res://assets/sprites/Player/3/Run.png<>uid://de0ukhk5xbvt6::::res://assets/sprites/Player/3/Squat.png
-player.gd::GDScript::-1::1740201459::0::1::::<>CharacterBody2D<>::
+Main.tscn::PackedScene::5158903860989122432::1740287454::0::1::::<><>::res://player.gd<>uid://bip7wonscssk4::::res://assets/sprites/Player/3/Attack1.png<>uid://pe7nyue8r3g::::res://assets/sprites/Player/3/Idle.png<>uid://bspp5b52ulmib::::res://assets/sprites/Player/3/Attack2.png<>uid://bkcvkxsfx5k5m::::res://assets/sprites/Player/3/Walk.png<>uid://c1igee6286fnu::::res://assets/sprites/object/box1.png<>uid://dwa05peyho37e::::res://assets/sprites/Player/3/Death.png<>uid://cwvura0x1w42y::::res://assets/sprites/Player/3/Hurt.png<>uid://jxkit2nccp7h::::res://assets/sprites/floor/floor_test_texture.png<>uid://chqx4tx5s4o6o::::res://assets/sprites/Player/3/Jump.png<>uid://c3kiaufqh72yj::::res://assets/sprites/Player/3/Run.png<>uid://de0ukhk5xbvt6::::res://assets/sprites/Player/3/Squat.png
+player.gd::GDScript::-1::1740287338::0::1::::<>CharacterBody2D<>::
 ::res://assets/::1740182017
 ::res://assets/sprites/::1740182017
 ::res://assets/sprites/floor/::1740181285
