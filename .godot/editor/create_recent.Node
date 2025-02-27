@@ -1,6 +1,8 @@
 Sprite2D
 DirectionalLight2D
 LightOccluder2D
+TileMapLayer
+CharacterBody2D
 CollisionShape2D
 RigidBody2D
 DirectionalLight3D

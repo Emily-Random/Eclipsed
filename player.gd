@@ -31,4 +31,9 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED * delta)  # Smooth deceleration
 		anim_player.play("Idle")
 	# Move with slide, handling collisions automatically
+
 	move_and_slide()
+	
+	for i in range(get_slide_collision_count()):
+		var collision = get_slide_collision(i)
+		print("Colliding with: ", collision.get_collider())
