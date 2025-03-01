@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://de0ukhk5xbvt6" path="res://assets/sprites/Player/3/Squat.png" id="9_grluw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dyt3b"]
-size = Vector2(23.75, 35.5)
+size = Vector2(4.875, 6.75)
 
 [sub_resource type="Animation" id="Animation_2dfdn"]
 length = 0.001
@@ -442,16 +442,15 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qjmn3"]
-size = Vector2(36, 77.375)
+size = Vector2(12, 15.3438)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_mtunv"]
-polygon = PackedVector2Array(-222, -88, -220, -3, -166, -2, -166, -88)
+polygon = PackedVector2Array(-220, -80, -220, -63, -208, -63, -208, -80)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_dow2w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p8mhc"]
-
-size = Vector2(201.5, 38)
+size = Vector2(229.75, 62)
 
 [node name="Node2D" type="Node2D"]
 
@@ -468,9 +467,7 @@ script = ExtResource("1_skho8")
 zoom = Vector2(5, 5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-
-position = Vector2(0, -1)
-
+position = Vector2(-23.4375, -3.625)
 shape = SubResource("RectangleShape2D_dyt3b")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Player"]
@@ -479,44 +476,38 @@ libraries = {
 }
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
-
-position = Vector2(-359, -49)
-scale = Vector2(2.19048, 2.19048)
-
-
+position = Vector2(-21, -10)
+scale = Vector2(0.476191, 0.476191)
 sprite_frames = SubResource("SpriteFrames_actmg")
 animation = &"Attack1"
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
-position = Vector2(277, -45)
-scale = Vector2(0.107422, 0.170898)
+position = Vector2(13.875, -8.31253)
+scale = Vector2(0.0239258, 0.0339354)
 texture = ExtResource("4_nwaxi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-position = Vector2(277, -39)
+position = Vector2(14, -8.67188)
 shape = SubResource("RectangleShape2D_qjmn3")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="RigidBody2D"]
 z_index = 1
-position = Vector2(469, 3)
+position = Vector2(228, 63)
 occluder = SubResource("OccluderPolygon2D_mtunv")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 physics_material_override = SubResource("PhysicsMaterial_dow2w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-
+position = Vector2(-0.875, 31)
 shape = SubResource("RectangleShape2D_p8mhc")
 debug_color = Color(0, 0.647674, 0.204351, 0.42)
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
-scale = Vector2(1.44228, 0.893646)
+position = Vector2(0, 32)
+scale = Vector2(0.292031, 0.173342)
 texture = ExtResource("5_i388n")
 
-position = Vector2(161, -1)
-shape = SubResource("RectangleShape2D_p8mhc")
-
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
-
