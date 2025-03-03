@@ -1,1 +1,6 @@
 .import/\n*.tmp\n*.import\n.export/ \n.godot/
+.godot/editor/script_editor_cache.cfg
+.godot/editor/editor_layout.cfg
+.godot/editor/editor_layout.cfg
+.godot/.DS_Store
+.DS_Store
