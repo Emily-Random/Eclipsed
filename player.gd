@@ -17,7 +17,8 @@ func _physics_process(delta: float) -> void:
 	in_shadow = is_in_shadow() 
 	if health <= 0:
 		if player_death_anim:
-			anim_player.visible = false
+			if anim_player.animation == "Death" and anim_player.frame == anim_player.sprite_frames.get_frame_count("Death") - 1:
+				anim_player.visible = false  # Only hide when animation ends
 		else:
 			velocity.x = 0
 			player_state = "Death"
