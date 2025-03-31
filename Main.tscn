@@ -636,8 +636,8 @@ size = Vector2(1238, 62)
 self_modulate = Color(0, 1, 1, 1)
 light_mask = 2
 visibility_layer = 2
-position = Vector2(504, -32.25)
-scale = Vector2(1.89008, 0.183702)
+position = Vector2(362.5, -215.5)
+scale = Vector2(2.32214, 1.19613)
 texture = ExtResource("1_jhfap")
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
@@ -730,8 +730,8 @@ shape = SubResource("RectangleShape2D_p8mhc")
 debug_color = Color(0, 0.647674, 0.204351, 0.42)
 
 [node name="Sprite2D" type="Sprite2D" parent="floor"]
-position = Vector2(500.156, 29)
-scale = Vector2(1.55795, 0.173342)
+position = Vector2(359, 176.813)
+scale = Vector2(1.91217, 0.989986)
 texture = ExtResource("5_i388n")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
