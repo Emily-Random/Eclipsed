@@ -623,7 +623,7 @@ polygon = PackedVector2Array(-220, -80, -220, -60, -203, -60, -203, -80)
 size = Vector2(19, 45)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_hwgkr"]
-polygon = PackedVector2Array(-2, -29, -1, 18, 17, 18, 17, -29)
+polygon = PackedVector2Array(-2, -27, -1, 18, 17, 18, 17, -27)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_dow2w"]
 
@@ -708,17 +708,17 @@ occluder = SubResource("OccluderPolygon2D_mtunv")
 [node name="box2" type="RigidBody2D" parent="." groups=["box"]]
 
 [node name="Sprite2D" type="Sprite2D" parent="box2"]
-position = Vector2(67.5, -21.3125)
+position = Vector2(109.5, -21.3125)
 scale = Vector2(0.0371094, 0.0886229)
 texture = ExtResource("4_nwaxi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="box2"]
-position = Vector2(67.5, -21.5)
+position = Vector2(109.5, -21.5)
 shape = SubResource("RectangleShape2D_k2qhl")
 debug_color = Color(5.77569e-07, 0.565449, 0.865401, 0.42)
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="box2"]
-position = Vector2(60, -17)
+position = Vector2(102, -17)
 occluder = SubResource("OccluderPolygon2D_hwgkr")
 
 [node name="floor" type="StaticBody2D" parent="."]
@@ -730,8 +730,8 @@ shape = SubResource("RectangleShape2D_p8mhc")
 debug_color = Color(0, 0.647674, 0.204351, 0.42)
 
 [node name="Sprite2D" type="Sprite2D" parent="floor"]
-position = Vector2(502, 29)
-scale = Vector2(1.55505, 0.173342)
+position = Vector2(500.156, 29)
+scale = Vector2(1.55795, 0.173342)
 texture = ExtResource("5_i388n")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
