@@ -8,6 +8,7 @@ var in_shadow = false
 var player_state = "Idle"
 var player_death_anim = false
 @onready var anim_player = $AnimatedSprite2D # Reference to the AnimatedSprite2D node
+@onready var shadow_area = $ShadowArea
 
 func _ready():
 	enemy = get_tree().get_first_node_in_group("enemy") # get enemy
@@ -73,9 +74,10 @@ func attack_enemy():
 	enemy.player_attacked = false
 	
 func is_in_shadow():
-	for i in range(get_slide_collision_count()):
-		var collision = get_slide_collision(i)
-		var collider = collision.get_collider()
-		if collider.is_in_group("shadow_caster"):
+	var overlapping_areas = shadow_area.get_overlapping_areas()
+	for area in overlapping_areas:
+		if area.is_in_group("shadow_caster"):
+			print("Player is in shadow!")
 			return true
+	print("Player is not in shadow!")
 	return false
