@@ -81,9 +81,8 @@ func attack_player():
 		var anim_player = player.get_node("AnimatedSprite2D")
 		player.player_state = "Hurt"
 		player.health -= 1
-		print(player.health)
 	attack_freeze()
-			
+
 func attack_freeze():
 	frozen = true
 	if player_attacked:
