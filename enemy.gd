@@ -49,6 +49,7 @@ func _physics_process(delta: float) -> void:
 			if not player.in_shadow:
 				enemy_state = "Walk"
 			else:
+				print("Enemy stops chasing. Player is in shadow.")
 				enemy_state = "Idle"
 				velocity.x = 0
 			

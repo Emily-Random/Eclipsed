@@ -1,4 +1,4 @@
-[gd_scene load_steps=104 format=3 uid="uid://cfranmff6d32s"]
+[gd_scene load_steps=107 format=3 uid="uid://cfranmff6d32s"]
 
 [ext_resource type="Texture2D" uid="uid://lw6kitesi0ja" path="res://assets/sprites/background/sky.png" id="1_jhfap"]
 [ext_resource type="Script" path="res://player.gd" id="1_skho8"]
@@ -447,6 +447,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lclub"]
+size = Vector2(9, 3)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bjuft"]
 size = Vector2(12, 13)
 
@@ -619,16 +622,20 @@ size = Vector2(17, 19.6719)
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_mtunv"]
 polygon = PackedVector2Array(-220, -80, -220, -60, -203, -60, -203, -80)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x4aex"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k2qhl"]
 size = Vector2(19, 45)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_hwgkr"]
 polygon = PackedVector2Array(-2, -27, -1, 18, 17, 18, 17, -27)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_khx2h"]
+
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_dow2w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p8mhc"]
-size = Vector2(1238, 62)
+size = Vector2(1539, 62)
 
 [node name="Node2D" type="Node2D"]
 
@@ -636,7 +643,7 @@ size = Vector2(1238, 62)
 self_modulate = Color(0, 1, 1, 1)
 light_mask = 2
 visibility_layer = 2
-position = Vector2(362.5, -215.5)
+position = Vector2(358, -208)
 scale = Vector2(2.32214, 1.19613)
 texture = ExtResource("1_jhfap")
 
@@ -667,6 +674,12 @@ position = Vector2(-21, -10)
 scale = Vector2(0.476191, 0.476191)
 sprite_frames = SubResource("SpriteFrames_actmg")
 animation = &"Attack"
+
+[node name="ShadowArea" type="Area2D" parent="Player"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/ShadowArea"]
+position = Vector2(-23.5, -0.5)
+shape = SubResource("RectangleShape2D_lclub")
 
 [node name="Enemy" type="CharacterBody2D" parent="." groups=["enemy"]]
 script = ExtResource("11_nrmh0")
@@ -705,6 +718,12 @@ z_index = 1
 position = Vector2(228, 60)
 occluder = SubResource("OccluderPolygon2D_mtunv")
 
+[node name="Area2D" type="Area2D" parent="box" groups=["shadow_caster"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="box/Area2D"]
+position = Vector2(-1, -7)
+shape = SubResource("RectangleShape2D_x4aex")
+
 [node name="box2" type="RigidBody2D" parent="." groups=["box"]]
 
 [node name="Sprite2D" type="Sprite2D" parent="box2"]
@@ -721,16 +740,22 @@ debug_color = Color(5.77569e-07, 0.565449, 0.865401, 0.42)
 position = Vector2(102, -17)
 occluder = SubResource("OccluderPolygon2D_hwgkr")
 
+[node name="Area2D" type="Area2D" parent="box2" groups=["shadow_caster"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="box2/Area2D"]
+position = Vector2(90, -8)
+shape = SubResource("RectangleShape2D_khx2h")
+
 [node name="floor" type="StaticBody2D" parent="."]
 physics_material_override = SubResource("PhysicsMaterial_dow2w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor"]
-position = Vector2(525, 28)
+position = Vector2(374.5, 28)
 shape = SubResource("RectangleShape2D_p8mhc")
 debug_color = Color(0, 0.647674, 0.204351, 0.42)
 
 [node name="Sprite2D" type="Sprite2D" parent="floor"]
-position = Vector2(359, 176.813)
+position = Vector2(354, 178)
 scale = Vector2(1.91217, 0.989986)
 texture = ExtResource("5_i388n")
 
