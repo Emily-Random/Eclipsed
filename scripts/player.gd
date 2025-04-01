@@ -1,19 +1,23 @@
 extends CharacterBody2D
+class_name Player
 
 var enemy: Node2D
+var health = 10
 const SPEED = 60.0
 const JUMP_VELOCITY = -200.0
-var health = 10
 var in_shadow = false
 var player_state = "Idle"
 var player_death_anim = false
 @onready var anim_player = $AnimatedSprite2D # Reference to the AnimatedSprite2D node
 @onready var shadow_area = $ShadowArea
+@onready var health_bar = $HealthBar
 
 func _ready():
+	health_bar.value = 10
 	enemy = get_tree().get_first_node_in_group("enemy") # get enemy
 	
 func _physics_process(delta: float) -> void:	
+	health_bar.value = health
 	anim_player.play(player_state)
 	in_shadow = is_in_shadow() 
 	if health <= 0:
