@@ -1,10 +1,10 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1743509236
+::res://::1743597932
 icon.svg::CompressedTexture2D::6250599820523364253::1739452945::1743506492::1::::<><>::
 ::res://art/::1739605577
 ::res://assets/::1743397861
 ::res://assets/sprites/::1743505681
-::res://assets/sprites/background/::1743509518
+::res://assets/sprites/background/::1743509534
 cloud-sprite.png::CompressedTexture2D::2172920912291338602::1743509466::1743509534::1::::<><>::
 sky.png::CompressedTexture2D::819394125066705078::1743397757::1743506492::1::::<><>::
 ::res://assets/sprites/collectibles/::1743506493
@@ -73,10 +73,10 @@ WalkAttack2.png::CompressedTexture2D::4302442094353175125::1739605701::174350649
 Planes_ValMore.ttf::FontFile::4070076902046224253::1739605701::1743506492::1::::<><>::
 ::res://assets/sprites/Player/PSD/::1739605701
 ::res://fonts/::1739533489
-::res://scenes/::1743509390
+::res://scenes/::1743510736
 coin.tscn::PackedScene::1708341398137000197::1743507870::0::1::::<><>::res://scripts/coin.gd<>uid://bup2pswyvbudy::::res://assets/sprites/collectibles/heart.png
-Main.tscn::PackedScene::5158903860989122432::1743509390::0::1::::<><>::uid://lw6kitesi0ja::::res://assets/sprites/background/sky.png<>res://scripts/player.gd<>uid://bip7wonscssk4::::res://assets/sprites/Player/3/Attack1.png<>uid://bspp5b52ulmib::::res://assets/sprites/Player/3/Attack2.png<>uid://dwa05peyho37e::::res://assets/sprites/Player/3/Death.png<>uid://cwvura0x1w42y::::res://assets/sprites/Player/3/Hurt.png<>uid://pe7nyue8r3g::::res://assets/sprites/Player/3/Idle.png<>uid://chqx4tx5s4o6o::::res://assets/sprites/Player/3/Jump.png<>uid://c3kiaufqh72yj::::res://assets/sprites/Player/3/Run.png<>uid://de0ukhk5xbvt6::::res://assets/sprites/Player/3/Squat.png<>uid://bkcvkxsfx5k5m::::res://assets/sprites/Player/3/Walk.png<>res://scripts/enemy.gd<>uid://b4p8jdisvdlo2::::res://assets/sprites/Player/1/Attack1.png<>uid://db5fqi0nufdgh::::res://assets/sprites/Player/1/Hurt.png<>uid://cvw4nqfmd4tmw::::res://assets/sprites/Player/1/Idle.png<>uid://4b402g802ic2::::res://assets/sprites/Player/1/Walk.png<>uid://c1igee6286fnu::::res://assets/sprites/object/box1.png<>uid://jxkit2nccp7h::::res://assets/sprites/floor/floor_test_texture.png<>uid://ylsesaxode2h::::res://scenes/coin.tscn<>uid://d3xl6ttk05lcf::::res://assets/sprites/object/bush-sprite.png
-::res://scripts/::1743509281
+Main.tscn::PackedScene::5158903860989122432::1743510736::0::1::::<><>::uid://lw6kitesi0ja::::res://assets/sprites/background/sky.png<>res://scripts/player.gd<>uid://bip7wonscssk4::::res://assets/sprites/Player/3/Attack1.png<>uid://bspp5b52ulmib::::res://assets/sprites/Player/3/Attack2.png<>uid://dwa05peyho37e::::res://assets/sprites/Player/3/Death.png<>uid://cwvura0x1w42y::::res://assets/sprites/Player/3/Hurt.png<>uid://pe7nyue8r3g::::res://assets/sprites/Player/3/Idle.png<>uid://chqx4tx5s4o6o::::res://assets/sprites/Player/3/Jump.png<>uid://c3kiaufqh72yj::::res://assets/sprites/Player/3/Run.png<>uid://de0ukhk5xbvt6::::res://assets/sprites/Player/3/Squat.png<>uid://bkcvkxsfx5k5m::::res://assets/sprites/Player/3/Walk.png<>res://scripts/enemy.gd<>uid://b4p8jdisvdlo2::::res://assets/sprites/Player/1/Attack1.png<>uid://db5fqi0nufdgh::::res://assets/sprites/Player/1/Hurt.png<>uid://cvw4nqfmd4tmw::::res://assets/sprites/Player/1/Idle.png<>uid://4b402g802ic2::::res://assets/sprites/Player/1/Walk.png<>uid://c1igee6286fnu::::res://assets/sprites/object/box1.png<>uid://jxkit2nccp7h::::res://assets/sprites/floor/floor_test_texture.png<>uid://ylsesaxode2h::::res://scenes/coin.tscn<>uid://d3xl6ttk05lcf::::res://assets/sprites/object/bush-sprite.png<>uid://57txpudlsvss::::res://assets/sprites/background/cloud-sprite.png
+::res://scripts/::1743510736
 coin.gd::GDScript::-1::1743505681::0::1::::<>Node2D<>::
-enemy.gd::GDScript::-1::1743509281::0::1::::<>CharacterBody2D<>::
+enemy.gd::GDScript::-1::1743510736::0::1::::<>CharacterBody2D<>::
 player.gd::GDScript::-1::1743505681::0::1::::Player<>CharacterBody2D<>::
