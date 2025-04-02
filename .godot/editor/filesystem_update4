@@ -1,9 +1,3 @@
-res://scenes/coin.tscn
 res://scenes/Main.tscn
-res://scenes/coin_ui.tscn
-res://scripts/coin.gd
-res://scripts/coin_ui.gd
+res://scenes/coin.tscn
 res://scripts/enemy.gd
-res://scripts/event_controller.gd
-res://scripts/game_controller.gd
-res://scripts/player.gd

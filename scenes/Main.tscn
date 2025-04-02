@@ -1,4 +1,4 @@
-[gd_scene load_steps=110 format=3 uid="uid://cfranmff6d32s"]
+[gd_scene load_steps=113 format=3 uid="uid://cfranmff6d32s"]
 
 [ext_resource type="Texture2D" uid="uid://lw6kitesi0ja" path="res://assets/sprites/background/sky.png" id="1_48ujl"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="2_nbbdd"]
@@ -19,6 +19,8 @@
 [ext_resource type="Texture2D" uid="uid://c1igee6286fnu" path="res://assets/sprites/object/box1.png" id="17_3asgw"]
 [ext_resource type="Texture2D" uid="uid://jxkit2nccp7h" path="res://assets/sprites/floor/floor_test_texture.png" id="18_ju0kb"]
 [ext_resource type="PackedScene" uid="uid://ylsesaxode2h" path="res://scenes/coin.tscn" id="20_0iu2s"]
+[ext_resource type="Texture2D" uid="uid://d3xl6ttk05lcf" path="res://assets/sprites/object/bush-sprite.png" id="20_s0csc"]
+[ext_resource type="Texture2D" uid="uid://57txpudlsvss" path="res://assets/sprites/background/cloud-sprite.png" id="21_kwa3m"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6chfj"]
 bg_color = Color(0, 0, 0, 1)
@@ -632,17 +634,21 @@ polygon = PackedVector2Array(-220, -80, -220, -60, -203, -60, -203, -80)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x4aex"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k2qhl"]
-size = Vector2(19, 45)
+size = Vector2(19, 36)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_hwgkr"]
-polygon = PackedVector2Array(-2, -27, -1, 18, 17, 18, 17, -27)
+polygon = PackedVector2Array(-1, -18, -1, 18, 17, 18, 17, -18)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_khx2h"]
+size = Vector2(20, 40)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_dow2w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p8mhc"]
 size = Vector2(1503, 356)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_row0w"]
+size = Vector2(18, 22)
 
 [node name="Node2D" type="Node2D"]
 
@@ -650,8 +656,8 @@ size = Vector2(1503, 356)
 self_modulate = Color(0, 1, 1, 1)
 light_mask = 2
 visibility_layer = 2
-position = Vector2(358, -208)
-scale = Vector2(2.32214, 1.19613)
+position = Vector2(577.5, -208)
+scale = Vector2(5.15878, 1.19613)
 texture = ExtResource("1_48ujl")
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
@@ -664,10 +670,10 @@ max_distance = 200.0
 script = ExtResource("2_nbbdd")
 
 [node name="HealthBar" type="ProgressBar" parent="Player"]
-offset_left = -109.0
-offset_top = -63.0
-offset_right = -40.0
-offset_bottom = -55.0
+offset_left = -272.0
+offset_top = -175.0
+offset_right = -203.0
+offset_bottom = -167.0
 theme_override_styles/background = SubResource("StyleBoxFlat_6chfj")
 theme_override_styles/fill = SubResource("StyleBoxFlat_2jcm0")
 max_value = 10.0
@@ -712,16 +718,16 @@ wait_time = 4.0
 one_shot = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy"]
-position = Vector2(-55, -6.5)
+position = Vector2(-86, -6.5)
 shape = SubResource("RectangleShape2D_bjuft")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Enemy"]
-position = Vector2(-55, -11)
+position = Vector2(-86, -11)
 scale = Vector2(0.535715, 0.511905)
 sprite_frames = SubResource("SpriteFrames_xghy5")
 animation = &"Hurt"
 
-[node name="box" type="RigidBody2D" parent="." groups=["box"]]
+[node name="box" type="RigidBody2D" parent="." groups=["box", "obstacle"]]
 
 [node name="Sprite2D" type="Sprite2D" parent="box"]
 position = Vector2(16.375, -9.81253)
@@ -743,15 +749,15 @@ occluder = SubResource("OccluderPolygon2D_mtunv")
 position = Vector2(-1, -7)
 shape = SubResource("RectangleShape2D_x4aex")
 
-[node name="box2" type="RigidBody2D" parent="." groups=["box"]]
+[node name="box2" type="RigidBody2D" parent="." groups=["box", "obstacle"]]
 
 [node name="Sprite2D" type="Sprite2D" parent="box2"]
-position = Vector2(109.5, -21.3125)
-scale = Vector2(0.0371094, 0.0886229)
+position = Vector2(109.5, -16.8125)
+scale = Vector2(0.0371094, 0.0710448)
 texture = ExtResource("17_3asgw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="box2"]
-position = Vector2(109.5, -21.5)
+position = Vector2(109.5, -17)
 shape = SubResource("RectangleShape2D_k2qhl")
 debug_color = Color(5.77569e-07, 0.565449, 0.865401, 0.42)
 
@@ -762,7 +768,7 @@ occluder = SubResource("OccluderPolygon2D_hwgkr")
 [node name="Area2D" type="Area2D" parent="box2" groups=["shadow_caster"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="box2/Area2D"]
-position = Vector2(90, -8)
+position = Vector2(90, -18)
 shape = SubResource("RectangleShape2D_khx2h")
 
 [node name="floor" type="StaticBody2D" parent="."]
@@ -774,26 +780,67 @@ shape = SubResource("RectangleShape2D_p8mhc")
 debug_color = Color(0, 0.647674, 0.204351, 0.42)
 
 [node name="Sprite2D" type="Sprite2D" parent="floor"]
-position = Vector2(354, 178)
-scale = Vector2(1.91217, 0.989986)
+position = Vector2(570.5, 177)
+scale = Vector2(4.24216, 0.989986)
 texture = ExtResource("18_ju0kb")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 
 [node name="coin" parent="." instance=ExtResource("20_0iu2s")]
-position = Vector2(14, -30)
+position = Vector2(294, -24)
 
 [node name="coin2" parent="." instance=ExtResource("20_0iu2s")]
-position = Vector2(35, -21)
+position = Vector2(184, -8)
 
 [node name="coin3" parent="." instance=ExtResource("20_0iu2s")]
-position = Vector2(-25, -23)
+position = Vector2(262, -48)
 
 [node name="coin4" parent="." instance=ExtResource("20_0iu2s")]
-position = Vector2(55, -11)
+position = Vector2(234, -20)
 
 [node name="coin5" parent="." instance=ExtResource("20_0iu2s")]
-position = Vector2(95, -32)
+position = Vector2(287, -38)
 
 [node name="coin6" parent="." instance=ExtResource("20_0iu2s")]
-position = Vector2(78, -20)
+position = Vector2(108, -65)
+
+[node name="tree" type="RigidBody2D" parent="." groups=["obstacle"]]
+position = Vector2(14, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tree"]
+position = Vector2(69, -8)
+shape = SubResource("RectangleShape2D_row0w")
+debug_color = Color(0.679257, 0.496674, 0.245834, 0.42)
+
+[node name="Sprite2D" type="Sprite2D" parent="tree"]
+position = Vector2(69, -8)
+scale = Vector2(0.220174, 0.273893)
+texture = ExtResource("20_s0csc")
+
+[node name="tree2" type="RigidBody2D" parent="." groups=["obstacle"]]
+position = Vector2(14, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tree2"]
+position = Vector2(155, -8)
+shape = SubResource("RectangleShape2D_row0w")
+debug_color = Color(0.679257, 0.496674, 0.245834, 0.42)
+
+[node name="Sprite2D" type="Sprite2D" parent="tree2"]
+position = Vector2(155, -8)
+scale = Vector2(0.220174, 0.273893)
+texture = ExtResource("20_s0csc")
+
+[node name="Cloud" type="Sprite2D" parent="."]
+position = Vector2(30, -91)
+scale = Vector2(0.136538, 0.0787037)
+texture = ExtResource("21_kwa3m")
+
+[node name="Cloud2" type="Sprite2D" parent="."]
+position = Vector2(199, -70)
+scale = Vector2(0.136538, 0.0787037)
+texture = ExtResource("21_kwa3m")
+
+[node name="Cloud3" type="Sprite2D" parent="."]
+position = Vector2(339, -99)
+scale = Vector2(0.136538, 0.0787037)
+texture = ExtResource("21_kwa3m")
