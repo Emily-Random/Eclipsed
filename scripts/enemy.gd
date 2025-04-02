@@ -28,7 +28,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.y = 0
 	
-	if colliding_with_box() and is_on_floor():
+	if colliding_with_obstacle() and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 		enemy_state = "Jump"
 		
@@ -67,11 +67,11 @@ func colliding_with_player() -> bool:
 			return true
 	return false
 	
-func colliding_with_box() -> bool:
+func colliding_with_obstacle() -> bool:
 	for i in range(get_slide_collision_count()):
 		var collision = get_slide_collision(i)
 		var collider = collision.get_collider()
-		if collider.is_in_group("box"):
+		if collider.is_in_group("obstacle"):
 			return true
 	return false
 		
@@ -80,7 +80,7 @@ func attack_player():
 	if player:
 		var anim_player = player.get_node("AnimatedSprite2D")
 		player.player_state = "Hurt"
-		player.health -= 1
+		player.health -= 2
 	attack_freeze()
 
 func attack_freeze():

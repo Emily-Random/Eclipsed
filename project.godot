@@ -19,8 +19,8 @@ config/icon="res://icon.svg"
 
 player=""
 enemy=""
-box=""
 shadow_caster=""
+obstacle=""
 
 [input]
 
