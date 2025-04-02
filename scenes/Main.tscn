@@ -648,7 +648,7 @@ size = Vector2(20, 40)
 size = Vector2(1503, 356)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_row0w"]
-size = Vector2(18, 22)
+size = Vector2(14, 22)
 
 [node name="Node2D" type="Node2D"]
 
@@ -670,10 +670,10 @@ max_distance = 200.0
 script = ExtResource("2_nbbdd")
 
 [node name="HealthBar" type="ProgressBar" parent="Player"]
-offset_left = -272.0
-offset_top = -175.0
-offset_right = -203.0
-offset_bottom = -167.0
+offset_left = -137.0
+offset_top = -78.0
+offset_right = -86.0
+offset_bottom = -70.0
 theme_override_styles/background = SubResource("StyleBoxFlat_6chfj")
 theme_override_styles/fill = SubResource("StyleBoxFlat_2jcm0")
 max_value = 10.0
@@ -683,7 +683,7 @@ show_percentage = false
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 visible = false
-zoom = Vector2(5, 5)
+zoom = Vector2(4, 4)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2(-20.4375, -6.125)
@@ -808,7 +808,7 @@ position = Vector2(108, -65)
 position = Vector2(14, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tree"]
-position = Vector2(69, -8)
+position = Vector2(68, -8)
 shape = SubResource("RectangleShape2D_row0w")
 debug_color = Color(0.679257, 0.496674, 0.245834, 0.42)
 
