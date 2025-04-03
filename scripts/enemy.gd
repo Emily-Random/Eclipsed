@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 var player: Node2D  # Reference to player
-const SPEED = 40.0
+const SPEED = 60.0
 const JUMP_VELOCITY = -200.0
 var frozen = false
 var enemy_state = "Idle"
@@ -50,8 +50,15 @@ func _physics_process(delta: float) -> void:
 				enemy_state = "Walk"
 			else:
 				print("Enemy stops chasing. Player is in shadow.")
-				enemy_state = "Idle"
+				enemy_state = "Idle" 
 				velocity.x = 0
+				
+				await get_tree().create_timer(1.0).timeout
+				
+				enemy_state = "Walk"
+				var direction = -sign(player.global_position.x - anim_enemy.global_position.x)
+				velocity.x = direction * SPEED
+				anim_enemy.flip_h = direction < 0
 			
 		if colliding_with_player():
 			attack_player()
