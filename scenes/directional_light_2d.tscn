@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dy1tflbava1m1"]
+
+[node name="DirectionalLight2D" type="DirectionalLight2D"]
+position = Vector2(-533, -281)
+rotation = 1.03323
+shadow_enabled = true
+max_distance = 200.0

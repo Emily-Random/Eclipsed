@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://b8ltomad7nhvj"]
+
+[ext_resource type="Texture2D" uid="uid://c1igee6286fnu" path="res://assets/sprites/object/box1.png" id="1_5iynr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k2qhl"]
+size = Vector2(23.5, 36)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_hwgkr"]
+polygon = PackedVector2Array(-1, -18, -1, 18, 23, 18, 23, -18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jifxa"]
+size = Vector2(37, 35)
+
+[node name="box2" type="RigidBody2D" groups=["box", "obstacle"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(112, -17)
+scale = Vector2(0.0488281, 0.0710448)
+texture = ExtResource("1_5iynr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(112.25, -17)
+shape = SubResource("RectangleShape2D_k2qhl")
+debug_color = Color(5.77569e-07, 0.565449, 0.865401, 0.42)
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+position = Vector2(101, -17)
+occluder = SubResource("OccluderPolygon2D_hwgkr")
+
+[node name="Area2D" type="Area2D" parent="." groups=["shadow_caster"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(81.5, -17.5)
+shape = SubResource("RectangleShape2D_jifxa")

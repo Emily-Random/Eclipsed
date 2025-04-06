@@ -1,8 +1,10 @@
+res://assets/sprites
+res://scenes
+res://scenes/levels
 res://assets/sprites/object
 res://assets/sprites/background
 res://assets/sprites/collectibles
 res://scripts
-res://scenes
 res://assets/sprites/Player/3
 res://assets/sprites/Player/1
 res://

@@ -1,0 +1,66 @@
+[gd_scene load_steps=12 format=3 uid="uid://cfranmff6d32s"]
+
+[ext_resource type="PackedScene" uid="uid://c5vrn3y2dlcg6" path="res://scenes/background.tscn" id="1_od888"]
+[ext_resource type="PackedScene" uid="uid://dy1tflbava1m1" path="res://scenes/directional_light_2d.tscn" id="2_4cc2e"]
+[ext_resource type="PackedScene" uid="uid://bhfvlxovxx6lh" path="res://scenes/player.tscn" id="2_f6md0"]
+[ext_resource type="PackedScene" uid="uid://d3sx60osk6wmd" path="res://scenes/enemy.tscn" id="3_1etcq"]
+[ext_resource type="PackedScene" uid="uid://b0eidieque17p" path="res://scenes/cloud.tscn" id="5_4hf6h"]
+[ext_resource type="PackedScene" uid="uid://7x3dk8br0fi0" path="res://scenes/tile_map.tscn" id="5_xr5uh"]
+[ext_resource type="PackedScene" uid="uid://ylsesaxode2h" path="res://scenes/coin.tscn" id="6_8qrx0"]
+[ext_resource type="PackedScene" uid="uid://bfwumnp77qufo" path="res://scenes/tree.tscn" id="7_jptu7"]
+[ext_resource type="PackedScene" uid="uid://dp6tapcclo1f1" path="res://scenes/box.tscn" id="8_4h5jw"]
+[ext_resource type="PackedScene" uid="uid://b8ltomad7nhvj" path="res://scenes/box_2.tscn" id="9_l4m4o"]
+[ext_resource type="PackedScene" uid="uid://hwwidtq8ol8c" path="res://scenes/portal.tscn" id="11_3jkbq"]
+
+[node name="Level 1" type="Node2D"]
+
+[node name="Background" parent="." instance=ExtResource("1_od888")]
+
+[node name="DirectionalLight2D" parent="." instance=ExtResource("2_4cc2e")]
+
+[node name="Player" parent="." instance=ExtResource("2_f6md0")]
+
+[node name="Enemy" parent="." instance=ExtResource("3_1etcq")]
+
+[node name="TileMap" parent="." instance=ExtResource("5_xr5uh")]
+
+[node name="Clouds" type="Node" parent="."]
+
+[node name="Cloud" parent="Clouds" instance=ExtResource("5_4hf6h")]
+
+[node name="Cloud2" parent="Clouds" instance=ExtResource("5_4hf6h")]
+position = Vector2(158, -71)
+
+[node name="Cloud3" parent="Clouds" instance=ExtResource("5_4hf6h")]
+position = Vector2(-70, -48)
+
+[node name="Coins" type="Node" parent="."]
+
+[node name="coin" parent="Coins" instance=ExtResource("6_8qrx0")]
+position = Vector2(167, -29)
+
+[node name="coin2" parent="Coins" instance=ExtResource("6_8qrx0")]
+position = Vector2(16, -32)
+
+[node name="coin3" parent="Coins" instance=ExtResource("6_8qrx0")]
+position = Vector2(111, -49)
+
+[node name="coin4" parent="Coins" instance=ExtResource("6_8qrx0")]
+position = Vector2(55, -12)
+
+[node name="Trees" type="Node" parent="."]
+
+[node name="tree" parent="Trees" instance=ExtResource("7_jptu7")]
+
+[node name="tree2" parent="Trees" instance=ExtResource("7_jptu7")]
+position = Vector2(-137, -4)
+
+[node name="portal" parent="." instance=ExtResource("11_3jkbq")]
+position = Vector2(187, -22)
+
+[node name="Boxes" type="Node" parent="."]
+
+[node name="box" parent="Boxes" instance=ExtResource("8_4h5jw")]
+
+[node name="box2" parent="Boxes" instance=ExtResource("9_l4m4o")]
+position = Vector2(0, 2)

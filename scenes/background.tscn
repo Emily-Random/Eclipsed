@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5vrn3y2dlcg6"]
+
+[ext_resource type="Texture2D" uid="uid://lw6kitesi0ja" path="res://assets/sprites/background/sky.png" id="1_yo4eo"]
+
+[node name="Background" type="Sprite2D"]
+self_modulate = Color(0, 1, 1, 1)
+light_mask = 2
+visibility_layer = 2
+position = Vector2(34, -58)
+scale = Vector2(0.540458, 0.379833)
+texture = ExtResource("1_yo4eo")

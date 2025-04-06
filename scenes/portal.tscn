@@ -1,0 +1,72 @@
+[gd_scene load_steps=11 format=3 uid="uid://hwwidtq8ol8c"]
+
+[ext_resource type="Texture2D" uid="uid://d232wyhop2sp8" path="res://assets/sprites/Dimensional_Portal.png" id="1_ilnry"]
+[ext_resource type="Script" path="res://scripts/portal.gd" id="1_vd0k2"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_remm5"]
+height = 46.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c8n7g"]
+atlas = ExtResource("1_ilnry")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5cful"]
+atlas = ExtResource("1_ilnry")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d8o4d"]
+atlas = ExtResource("1_ilnry")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n5ali"]
+atlas = ExtResource("1_ilnry")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8fodh"]
+atlas = ExtResource("1_ilnry")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bhkcr"]
+atlas = ExtResource("1_ilnry")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e4mb8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c8n7g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5cful")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d8o4d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n5ali")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8fodh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bhkcr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 11.0
+}]
+
+[node name="portal" type="Area2D"]
+script = ExtResource("1_vd0k2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_remm5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+modulate = Color(0, 0.906377, 0.395357, 1)
+position = Vector2(-1, 0)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_e4mb8")
+autoplay = "default"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
