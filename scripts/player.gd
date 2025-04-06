@@ -9,7 +9,7 @@ var in_shadow = false
 var player_state = "Idle"
 var player_death_anim = false
 @onready var anim_player = $AnimatedSprite2D # Reference to the AnimatedSprite2D node
-@onready var shadow_area = $ShadowArea
+@onready var area = $Area2D
 @onready var health_bar = $HealthBar
 
 func _ready():
@@ -78,10 +78,19 @@ func attack_enemy():
 	enemy.player_attacked = false
 	
 func is_in_shadow():
-	var overlapping_areas = shadow_area.get_overlapping_areas()
+	var overlapping_areas = area.get_overlapping_areas()
 	for area in overlapping_areas:
 		if area.is_in_group("shadow_caster"):
-			print("Player is in shadow!")
+			#print("Player is in shadow!")
 			return true
-	print("Player is not in shadow!")
+	#print("Player is not in shadow!")
+	return false
+	
+func is_in_portal():
+	var overlapping_areas = area.get_overlapping_areas()
+	for area in overlapping_areas:
+		if area.is_in_group("portal"):
+			print("Player is in portal!")
+			return true
+	print("Player is not in portal!")
 	return false

@@ -1,0 +1,58 @@
+[gd_scene load_steps=11 format=3 uid="uid://c5tr4sfuty0t"]
+
+[ext_resource type="PackedScene" uid="uid://c5vrn3y2dlcg6" path="res://scenes/background.tscn" id="1_ml4pb"]
+[ext_resource type="PackedScene" uid="uid://b0eidieque17p" path="res://scenes/cloud.tscn" id="2_moc2o"]
+[ext_resource type="PackedScene" uid="uid://dp6tapcclo1f1" path="res://scenes/box.tscn" id="3_bfd6p"]
+[ext_resource type="PackedScene" uid="uid://b8ltomad7nhvj" path="res://scenes/box_2.tscn" id="4_gx80b"]
+[ext_resource type="PackedScene" uid="uid://ylsesaxode2h" path="res://scenes/coin.tscn" id="5_c1hs0"]
+[ext_resource type="PackedScene" uid="uid://d3sx60osk6wmd" path="res://scenes/enemy.tscn" id="6_icsln"]
+[ext_resource type="PackedScene" uid="uid://bhfvlxovxx6lh" path="res://scenes/player.tscn" id="7_aacnp"]
+[ext_resource type="PackedScene" uid="uid://dy1tflbava1m1" path="res://scenes/directional_light_2d.tscn" id="8_7ieak"]
+[ext_resource type="PackedScene" uid="uid://7x3dk8br0fi0" path="res://scenes/tile_map.tscn" id="9_ddq21"]
+[ext_resource type="PackedScene" uid="uid://bfwumnp77qufo" path="res://scenes/tree.tscn" id="10_7qlqd"]
+
+[node name="Level 2" type="Node2D"]
+
+[node name="Background" parent="." instance=ExtResource("1_ml4pb")]
+position = Vector2(97, -47.3749)
+scale = Vector2(0.732824, 0.438535)
+
+[node name="Cloud" parent="." instance=ExtResource("2_moc2o")]
+
+[node name="box" parent="." instance=ExtResource("3_bfd6p")]
+position = Vector2(131, 32)
+
+[node name="box2" parent="." instance=ExtResource("4_gx80b")]
+position = Vector2(-10, 32)
+
+[node name="heart" parent="." instance=ExtResource("5_c1hs0")]
+
+[node name="Enemy" parent="." instance=ExtResource("6_icsln")]
+
+[node name="Player" parent="." instance=ExtResource("7_aacnp")]
+
+[node name="DirectionalLight2D" parent="." instance=ExtResource("8_7ieak")]
+
+[node name="TileMap" parent="." instance=ExtResource("9_ddq21")]
+layer_0/tile_data = PackedInt32Array(65534, 262144, 0, 65533, 262144, 0, 65532, 262144, 0, 65535, 262144, 0, 65529, 262144, 0, 65530, 262144, 0, 65531, 262144, 0, 0, 262144, 0, 1, 262144, 0, 2, 262144, 0, 11, 262144, 0, 12, 262144, 0, 131065, 262144, 1, 131068, 327680, 0, 131067, 262144, 1, 131070, 262144, 1, 65536, 262144, 1, 65537, 262144, 1, 65538, 327680, 0, 65539, 262144, 0, 131066, 262144, 1, 131069, 327680, 0, 131071, 262144, 1, 65546, 262144, 0, 65548, 262144, 1, 65547, 327680, 1, 65528, 262144, 0, 65527, 262144, 0, 131063, 262144, 1, 131064, 262144, 1, 131077, 262144, 0, 131078, 262144, 0, 131079, 262144, 0, 131080, 262144, 0, 131081, 262144, 0, 13, 262144, 0, 14, 262144, 0, 15, 262144, 0, 16, 262144, 0, 17, 262144, 0, 196610, 262144, 1, 196611, 262144, 1, 196612, 262144, 1, 196613, 262144, 1, 196615, 262144, 1, 196616, 262144, 1, 196617, 262144, 1, 196618, 262144, 1, 196619, 262144, 1, 131084, 262144, 1, 65549, 262144, 1, 65550, 262144, 1, 131086, 262144, 1, 131087, 262144, 1, 131088, 262144, 1, 131089, 262144, 1, 65553, 262144, 1, 131074, 327680, 0, 131083, 327680, 0, 65551, 327680, 0, 65552, 327680, 0, 131082, 327680, 1, 131085, 327680, 1, 131075, 327680, 1, 196614, 327680, 1, 18, 262144, 0, 20, 262144, 0, 19, 262144, 0, 65556, 262144, 1, 65555, 262144, 1, 65554, 262144, 1, 131090, 262144, 1, 131091, 262144, 1, 131092, 262144, 1, 65540, 262144, 0, 131076, 262144, 1)
+
+[node name="tree" parent="." instance=ExtResource("10_7qlqd")]
+position = Vector2(-62, -2)
+
+[node name="Cloud2" parent="." instance=ExtResource("2_moc2o")]
+position = Vector2(-83, -48)
+
+[node name="Cloud3" parent="." instance=ExtResource("2_moc2o")]
+position = Vector2(160, -57)
+
+[node name="box3" parent="." instance=ExtResource("3_bfd6p")]
+position = Vector2(258, 0)
+
+[node name="tree2" parent="." instance=ExtResource("10_7qlqd")]
+position = Vector2(-129, -3)
+
+[node name="tree3" parent="." instance=ExtResource("10_7qlqd")]
+position = Vector2(140, -3)
+
+[node name="Cloud4" parent="." instance=ExtResource("2_moc2o")]
+position = Vector2(286.406, -77.6562)

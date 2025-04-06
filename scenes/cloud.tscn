@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0eidieque17p"]
+
+[ext_resource type="Texture2D" uid="uid://57txpudlsvss" path="res://assets/sprites/background/cloud-sprite.png" id="1_7qal4"]
+
+[node name="Cloud" type="Sprite2D"]
+visibility_layer = 2
+position = Vector2(31.4063, -87.6562)
+scale = Vector2(0.145192, 0.128241)
+texture = ExtResource("1_7qal4")
