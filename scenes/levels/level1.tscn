@@ -63,4 +63,4 @@ position = Vector2(187, -22)
 [node name="box" parent="Boxes" instance=ExtResource("8_4h5jw")]
 
 [node name="box2" parent="Boxes" instance=ExtResource("9_l4m4o")]
-position = Vector2(0, 2)
+position = Vector2(6, -1)

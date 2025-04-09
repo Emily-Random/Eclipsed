@@ -10,6 +10,7 @@ var time = 0
 var player_attacked = false
 
 @onready var anim_enemy = $AnimatedSprite2D
+@onready var raycast = $RayCast2D
 
 func _ready():
 	add_to_group("enemy")
@@ -36,7 +37,7 @@ func _physics_process(delta: float) -> void:
 		var anim_player = player.get_node("AnimatedSprite2D")
 		if anim_player:
 			var direction = sign(anim_player.global_position.x - anim_enemy.global_position.x)
-			
+			raycast.target_position = anim_player.global_position
 			if not is_on_floor():
 				direction = last_direction
 			else:
@@ -75,12 +76,20 @@ func colliding_with_player() -> bool:
 	return false
 	
 func colliding_with_obstacle() -> bool:
-	for i in range(get_slide_collision_count()):
-		var collision = get_slide_collision(i)
-		var collider = collision.get_collider()
-		if collider.is_in_group("obstacle"):
+	if raycast.is_colliding():
+		var collision = raycast.get_collider()
+		if collision.name != "Player":
 			return true
-	return false
+		else:
+			return false
+	else:
+		return false
+	#for i in range(get_slide_collision_count()):
+		#var collision = get_slide_collision(i)
+		#var collider = collision.get_collider()
+		#if collider.is_in_group("obstacle"):
+			#return true
+	#return false
 		
 func attack_player():
 	enemy_state = "Attack"

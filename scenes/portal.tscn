@@ -64,9 +64,11 @@ shape = SubResource("CapsuleShape2D_remm5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 modulate = Color(0, 0.906377, 0.395357, 1)
-position = Vector2(-1, 0)
-scale = Vector2(1.5, 1.5)
+position = Vector2(-5.5, 0)
+scale = Vector2(1.78125, 1.5)
 sprite_frames = SubResource("SpriteFrames_e4mb8")
 autoplay = "default"
+
+[node name="Timer" type="Timer" parent="."]
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

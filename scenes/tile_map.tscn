@@ -119,6 +119,7 @@ texture = ExtResource("1_lrchg")
 0:7/0 = 0
 1:7/0 = 0
 3:7/0 = 0
+3:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.59375, -8, 3.84375, -8, 3.28125, 8, 3.28125, 8, -3.65625, 8)
 5:7/0 = 0
 6:7/0 = 0
 7:7/0 = 0
@@ -127,6 +128,7 @@ texture = ExtResource("1_lrchg")
 1:8/0 = 0
 2:8/0 = 0
 3:8/0 = 0
+3:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.59375, -8, 3.84375, -8, 3.28125, 8, 3.28125, 8, -3.65625, 8)
 4:8/0 = 0
 5:8/0 = 0
 6:8/0 = 0
@@ -174,6 +176,7 @@ texture = ExtResource("1_lrchg")
 3:15/0 = 0
 2:4/size_in_atlas = Vector2i(3, 3)
 2:4/0 = 0
+2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-15.2912, -9.8995, 15.8215, -10.0763, 4.68458, 24.7487, -3.62392, 24.3952)
 
 [sub_resource type="TileSet" id="TileSet_nucnj"]
 occlusion_layer_0/light_mask = 1
