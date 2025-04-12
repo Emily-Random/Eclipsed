@@ -4,3 +4,5 @@
 .godot/editor/editor_layout.cfg
 .godot/.DS_Store
 .DS_Store
+.godot/
+.import/

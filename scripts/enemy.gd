@@ -35,7 +35,7 @@ func _physics_process(delta: float) -> void:
 		
 	if player and not frozen:
 		var anim_player = player.get_node("AnimatedSprite2D")
-		if anim_player:
+		if anim_player and not player.in_shadow:
 			var direction = sign(anim_player.global_position.x - anim_enemy.global_position.x)
 			raycast.target_position = anim_player.global_position
 			if not is_on_floor():
@@ -54,7 +54,7 @@ func _physics_process(delta: float) -> void:
 				enemy_state = "Idle" 
 				velocity.x = 0
 				
-				await get_tree().create_timer(1.0).timeout
+				await get_tree().create_timer(1.5).timeout
 				
 				enemy_state = "Walk"
 				var direction = -sign(player.global_position.x - anim_enemy.global_position.x)
