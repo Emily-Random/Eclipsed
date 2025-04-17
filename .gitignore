@@ -6,3 +6,4 @@
 .DS_Store
 .godot/
 .import/
+*.cfg
