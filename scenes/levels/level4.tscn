@@ -1,0 +1,41 @@
+[gd_scene load_steps=10 format=3 uid="uid://cjsmg6crkgicm"]
+
+[ext_resource type="PackedScene" uid="uid://c5vrn3y2dlcg6" path="res://scenes/background.tscn" id="1_te70r"]
+[ext_resource type="PackedScene" uid="uid://dp6tapcclo1f1" path="res://scenes/box.tscn" id="2_qaqa8"]
+[ext_resource type="PackedScene" uid="uid://b0eidieque17p" path="res://scenes/cloud.tscn" id="4_xq8xy"]
+[ext_resource type="PackedScene" uid="uid://ylsesaxode2h" path="res://scenes/coin.tscn" id="5_xlw0b"]
+[ext_resource type="PackedScene" uid="uid://dy1tflbava1m1" path="res://scenes/directional_light_2d.tscn" id="6_c6q5v"]
+[ext_resource type="PackedScene" uid="uid://d3sx60osk6wmd" path="res://scenes/enemy.tscn" id="7_2s3ak"]
+[ext_resource type="PackedScene" uid="uid://bhfvlxovxx6lh" path="res://scenes/player.tscn" id="8_55ipq"]
+[ext_resource type="PackedScene" uid="uid://hwwidtq8ol8c" path="res://scenes/portal.tscn" id="9_deg3j"]
+[ext_resource type="PackedScene" uid="uid://7x3dk8br0fi0" path="res://scenes/tile_map.tscn" id="10_0xafm"]
+
+[node name="level4" type="Node2D"]
+
+[node name="Background" parent="." instance=ExtResource("1_te70r")]
+position = Vector2(187, -44)
+
+[node name="box" parent="." instance=ExtResource("2_qaqa8")]
+position = Vector2(72, 21)
+
+[node name="Cloud" parent="." instance=ExtResource("4_xq8xy")]
+position = Vector2(100, -57)
+
+[node name="heart" parent="." instance=ExtResource("5_xlw0b")]
+position = Vector2(193, -56)
+
+[node name="DirectionalLight2D" parent="." instance=ExtResource("6_c6q5v")]
+position = Vector2(153.445, 22.0158)
+
+[node name="Enemy" parent="." instance=ExtResource("7_2s3ak")]
+position = Vector2(153.445, 22.0158)
+
+[node name="Player" parent="." instance=ExtResource("8_55ipq")]
+position = Vector2(150, 7)
+
+[node name="portal" parent="." instance=ExtResource("9_deg3j")]
+position = Vector2(348, -5)
+
+[node name="TileMap" parent="." instance=ExtResource("10_0xafm")]
+position = Vector2(153.445, 22.0158)
+layer_0/tile_data = PackedInt32Array(65534, 0, 0, 65533, 0, 0, 65532, 0, 0, 65535, 0, 0, 65529, 0, 0, 65530, 0, 0, 65531, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 131065, 0, 1, 131068, 0, 1, 131067, 0, 1, 131070, 0, 1, 65536, 0, 1, 65537, 0, 1, 65538, 0, 1, 65540, 0, 1, 65542, 0, 1, 65543, 0, 1, 65539, 0, 1, 65541, 0, 1, 131066, 0, 1, 131069, 0, 1, 131071, 0, 1, 65544, 0, 1, 65545, 0, 1, 65546, 0, 1, 65548, 0, 1, 65547, 0, 1, 65528, 0, 0, 65527, 0, 0, 131063, 0, 1, 131064, 0, 1, -262142, 131072, 4, -131070, 196608, 7, -65534, 196608, 8, -2, 720896, 1, -65537, 720896, 0, -196608, 720896, 2, -196604, 589824, 2, -131067, 589824, 1, -65530, 589824, 0)
