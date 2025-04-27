@@ -1,3 +1,4 @@
+AudioStreamPlayer
 RayCast2D
 Timer
 AnimatedSprite2D
@@ -11,5 +12,3 @@ TileMap
 Sprite2D
 RigidBody2D
 ProgressBar
-Label
-TextureRect

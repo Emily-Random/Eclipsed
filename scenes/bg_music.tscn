@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://2s8076r5e1yu"]
+
+[ext_resource type="AudioStream" uid="uid://cccfylxu6v0kv" path="res://assets/music/ChillMenu.wav" id="1_xwdt3"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_xwdt3")
+autoplay = true
