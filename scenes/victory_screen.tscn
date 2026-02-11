@@ -1,0 +1,73 @@
+[gd_scene load_steps=3 format=3 uid="uid://victory_screen"]
+
+[ext_resource type="Script" path="res://scripts/victory_screen.gd" id="1_script"]
+
+[node name="VictoryScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.1, 0.3, 0.1, 1)
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -100
+offset_right = 100
+offset_bottom = 50
+grow_horizontal = 2
+text = "Yay, You Win!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Subtitle" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -250
+offset_right = 250
+offset_top = 60
+offset_bottom = 110
+grow_horizontal = 2
+text = "You have now successfully escaped the island! What an experience to remember! Congrats you are now back in real life."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Note" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -250
+offset_right = 250
+offset_top = 120
+offset_bottom = 140
+grow_horizontal = 2
+text = "This game still needs a lot of work, please consider giving it a star and contributing to it on GitHub (https://github.com/JLW-7/Eclipsed)."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="ExitButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -50
+offset_right = 50
+offset_top = 160
+offset_bottom = 190
+grow_horizontal = 2
+text = "Exit"
+
+[connection signal="pressed" from="ExitButton" to="." method="_on_exit_pressed"]

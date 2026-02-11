@@ -1,0 +1,71 @@
+[gd_scene load_steps=3 format=3 uid="uid://game_over_screen"]
+
+[ext_resource type="Script" path="res://scripts/game_over_screen.gd" id="1_script"]
+
+[node name="GameOverScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.3, 0.1, 0.1, 1)
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -100
+offset_right = 100
+offset_bottom = 50
+grow_horizontal = 2
+text = "Game Over"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Subtitle" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200
+offset_right = 200
+offset_top = 60
+offset_bottom = 110
+grow_horizontal = 2
+text = "Remember to stay in the shadows!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RestartButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -50
+offset_right = 50
+offset_top = 130
+offset_bottom = 160
+grow_horizontal = 2
+text = "Restart"
+
+[node name="ExitButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -50
+offset_right = 50
+offset_top = 170
+offset_bottom = 200
+grow_horizontal = 2
+text = "Exit"
+
+[connection signal="pressed" from="RestartButton" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="ExitButton" to="." method="_on_exit_pressed"]
