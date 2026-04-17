@@ -24,11 +24,14 @@ func _physics_process(delta: float) -> void:
 		if player_death_anim:
 			if anim_player.animation == "Death" and anim_player.frame == anim_player.sprite_frames.get_frame_count("Death") - 1:
 				anim_player.visible = false  # Only hide when animation ends
+				var game_over_screen_path = "res://scenes/game_over_screen.tscn"
+				get_tree().change_scene_to_file(game_over_screen_path)
 		else:
 			velocity.x = 0
-			player_state = "Death"
 			player_death_anim = true
+		player_state = "Death"
 		return
+		
 	# vertical movement
 	if not is_on_floor():
 		velocity += get_gravity() * delta  # Add gravity when not on the floor
@@ -51,7 +54,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED * delta)  # Smooth deceleration
 		if is_on_floor():
-			if not(player_state == "Hurt" or player_state == "Attack"):
+			if not(player_state == "Hurt" or player_state == "Attack" or player_state == "Death"):
 				player_state = "Idle"
 	
 	# attack
@@ -90,7 +93,5 @@ func is_in_portal():
 	var overlapping_areas = area.get_overlapping_areas()
 	for area in overlapping_areas:
 		if area.is_in_group("portal"):
-			print("Player is in portal!")
 			return true
-	print("Player is not in portal!")
 	return false

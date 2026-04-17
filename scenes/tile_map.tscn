@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://7x3dk8br0fi0"]
+[gd_scene format=3 uid="uid://7x3dk8br0fi0"]
 
 [ext_resource type="Texture2D" uid="uid://r8hbqs4br3vy" path="res://assets/sprites/background/world_tileset.png" id="1_lrchg"]
 
@@ -88,7 +88,7 @@ texture = ExtResource("1_lrchg")
 5:3/0 = 0
 6:3/0 = 0
 7:3/0 = 0
-7:3/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_blskw")
+7:3/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_blskw")
 7:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 8:3/0 = 0
 8:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -99,7 +99,7 @@ texture = ExtResource("1_lrchg")
 5:4/0 = 0
 6:4/0 = 0
 7:4/0 = 0
-7:4/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_03r6n")
+7:4/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_03r6n")
 7:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 8:4/0 = 0
 8:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -183,7 +183,7 @@ occlusion_layer_0/light_mask = 1
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_gvehy")
 
-[node name="TileMap" type="TileMap"]
+[node name="TileMap" type="TileMap" unique_id=1834354470]
 tile_set = SubResource("TileSet_nucnj")
 format = 2
 layer_0/tile_data = PackedInt32Array(65534, 0, 0, 65533, 0, 0, 65532, 0, 0, 65535, 0, 0, 65529, 0, 0, 65530, 0, 0, 65531, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 131065, 0, 1, 131068, 0, 1, 131067, 0, 1, 131070, 0, 1, 65536, 0, 1, 65537, 0, 1, 65538, 0, 1, 65540, 0, 1, 65542, 0, 1, 65543, 0, 1, 65539, 65536, 0, 65541, 65536, 0, 131066, 65536, 0, 131069, 65536, 1, 131071, 65536, 1, 65544, 65536, 0, 65545, 0, 1, 65546, 0, 1, 65548, 0, 1, 65547, 0, 1, 65528, 0, 0, 65527, 0, 0, 131063, 0, 1, 131064, 0, 1)

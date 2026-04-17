@@ -76,6 +76,11 @@ func colliding_with_player() -> bool:
 	return false
 	
 func colliding_with_obstacle() -> bool:
+	var anim_player = player.get_node("AnimatedSprite2D")
+	var direction = sign(anim_player.global_position.x - anim_enemy.global_position.x)
+	if direction == 0:
+		direction = last_direction
+	raycast.target_position = Vector2(direction, 0) * 16
 	if raycast.is_colliding():
 		var collision = raycast.get_collider()
 		if collision.name != "Player":
@@ -84,12 +89,6 @@ func colliding_with_obstacle() -> bool:
 			return false
 	else:
 		return false
-	#for i in range(get_slide_collision_count()):
-		#var collision = get_slide_collision(i)
-		#var collider = collision.get_collider()
-		#if collider.is_in_group("obstacle"):
-			#return true
-	#return false
 		
 func attack_player():
 	enemy_state = "Attack"
